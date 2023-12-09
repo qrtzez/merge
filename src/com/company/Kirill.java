@@ -1,14 +1,23 @@
 package com.company;
 
-public class Kirill{
+import java.util.function.UnaryOperator;
+
+public class Kirill {
 
     private Integer id ;
     private Integer date;
     private Integer restId;
     private Integer money;
     private Integer source;
+    private String guid;
 
-
+    public Kirill(Integer id, Integer date, Integer restId, Integer sumMoney, Integer source) {
+        this.id = id;
+        this.date = date;
+        this.restId = restId;
+        this.money = sumMoney;
+        this.source = source;
+    }
 
 
     public Kirill merge(Kirill other) {
@@ -21,12 +30,13 @@ public class Kirill{
         return this;
     }
 
-    public Kirill(Integer id, Integer date, Integer restId, Integer money, Integer source) {
+    public Kirill(Integer id, Integer date, Integer restId, Integer money, Integer source, String guid) {
         this.id = id;
         this.date = date;
         this.restId = restId;
         this.money = money;
         this.source = source;
+        this.guid = guid;
     }
 
     @Override
@@ -37,6 +47,7 @@ public class Kirill{
                 ", restId=" + restId +
                 ", money=" + money +
                 ", source=" + source +
+                ", guid=" + guid +
                 '}';
     }
 
@@ -58,5 +69,33 @@ public class Kirill{
 
     public Integer getId() {
         return id;
+    }
+
+    public String getGuid() {
+        return guid;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setDate(Integer date) {
+        this.date = date;
+    }
+
+    public void setRestId(Integer restId) {
+        this.restId = restId;
+    }
+
+    public void setMoney(Integer money) {
+        this.money = money;
+    }
+
+    public void setSource(Integer source) {
+        this.source = source;
+    }
+
+    public void setGuid(String guid) {
+        this.guid = guid;
     }
 }
